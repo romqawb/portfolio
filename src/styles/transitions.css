@@ -1,0 +1,43 @@
+.about-appear {
+    opacity: 0;
+  }
+  
+  .about-appear.about-appear-active {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+  .about-exit {
+    opacity: 1;
+  }
+
+  .about-exit.about-exit-active {
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+  }
+
+.hello-appear {
+  opacity: 0;
+}
+
+.hello-appear.hello-appear-active {
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+.iam-appear {
+  opacity: 0;
+}
+
+.iam-appear.iam-appear-active {
+  opacity: 1;
+  transition: opacity 2s ease-in-out 1s;
+}
+
+.intro-appear {
+  opacity: 0;
+}
+.intro-appear-active {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
