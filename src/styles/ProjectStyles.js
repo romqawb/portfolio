@@ -2,10 +2,15 @@ import sizeModule from "../components/sizes";
 const styles = {
     Project: {
         padding: '0 2rem',
+        // border: '1px solid white',
+        borderRadius: '5px',
+        padding: '1rem',
+        backgroundColor: 'rgba(0,0,0,0.4)',
+        // backgroundColor: 'rgba(19,19,19,1)',
         color: 'rgba(255,255,255,0.8)',
         textAlign: 'left',
-        width: '90%',
-        margin: '0 auto',
+        width: '80%',
+        margin: '2rem auto',
         display: 'flex',
         alignItems: 'center',
         [sizeModule.down("lg")]: {
@@ -16,10 +21,14 @@ const styles = {
         width: '50%',
         fontSize: '1.15rem',
         letterSpacing: '1.5px',
-        padding: '0 0.5rem',
         lineHeight: '25px',
+        textAlign: 'center',
+        paddingLeft: '1rem',
         [sizeModule.down('lg')]: {
             width: '100%',
+        },
+        '& > p': {
+            margin: '1rem 0 0 0',
         },
         '& > p > span': {
             fontWeight: '700',
@@ -34,8 +43,8 @@ const styles = {
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         width: '50%',
-        borderRadius: '20px',
-        border: '2px solid grey',
+        borderRadius: '5px',
+        // border: '2px solid grey',
         overflow: 'hidden',
         '&:hover > div': {
             transform: 'all 0.2s ease-in-out',
@@ -46,7 +55,7 @@ const styles = {
         },
     },
     ProjectOverlay: {
-        backgroundColor: 'rgba(0,0,0,0.7)',
+        backgroundColor: 'rgba(0,0,0,0.8)',
         height: '175px',
         opacity: '0',
         transform: 'all 0.2s ease-in-out',
@@ -61,7 +70,7 @@ const styles = {
             display: 'inline-block',
             padding: '0.75rem',
             border: '1px solid white',
-            borderRadius: '25px',
+            borderRadius: '3px',
             backgroundColor: 'black',
             width: '25%',
             textTransform: 'uppercase',
@@ -74,7 +83,6 @@ const styles = {
             }
         }
     }
-
 }
 
 export default styles;

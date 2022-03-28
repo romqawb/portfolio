@@ -40,7 +40,7 @@ const styles = {
         }
     },
     span: {
-        color: 'red',
+        color: 'rgb(185, 40, 27)',
     },
     active: {
         color: '#ffd301'

@@ -23,7 +23,7 @@ const ProjectsPage = (props) => {
             <div className={classes.ProjectPage}>
                 <PageHeader name='Projects' setActive={setActive} />
                 <Project
-                    description={'Fake barber shop web site that was built on express.js, with RESTful routing in mind and mongoDB to save the persistent data. Also some geolocation third party api was used during this project.'}
+                    description={'Express.js web app, with RESTful routing in mind and mongoDB to save the persistent data. Also some geolocation third party API was used during this project.'}
                     url={'https://quiet-anchorage-25973.herokuapp.com/'}
                     github={'https://github.com/romqawb/barber-shop'}
                     img={"/miniBarber.png"}

@@ -18,11 +18,11 @@ const styles = {
         '& a:hover': {
             color: '#ffd301',
             cursor: 'pointer',
-            borderBottom: '1px solid red'
+            borderBottom: '1px solid rgb(185, 40, 27)'
         }
     },
     divider: {
-        color: 'red',
+        color: 'rgb(185, 40, 27)',
         padding: '5px'
     }
 }
