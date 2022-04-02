@@ -14,47 +14,48 @@ const styles = {
             width: '100vw',
         },
     },
-    ContactHeader: {
+    ContactDescription: {
         color: 'rgba(255,255,255,0.8)',
-        padding: '1rem 2rem',
-        fontSize: '1.4rem',
-        letterSpacing: '1.5px'
+        padding: '0rem 4rem',
+        fontSize: '1.2rem',
+        lineHeight: '24px',
+        letterSpacing: '2px'
+    },
+    ContactInfoContainer: {
+        backgroundColor: 'rgb(19,19,19)',
+        borderRadius: '5px',
+        width: '80%',
+        margin: '1rem auto',
+        padding: '1rem'
     },
     ContactInfo: {
+        backgroundColor: 'rgb(8,8,8)',
+        borderRadius: '5px',
         listStyle: 'none',
-        width: '80%',
-        margin: '0 auto',
+        margin: '0',
         padding: '0.5rem 0',
+        width: '100%',
         '& > li': {
             padding: '0.75rem',
-            textAlign: 'center'
+            textAlign: 'center',
+            width: '100%',
         },
         '& > li > a': {
             textDecoration: 'none',
+            width: '100%',
             color: 'white',
-            fontSize: '1.1rem',
+            fontSize: '1rem',
             textTransform: 'uppercase',
-            padding: '0.5rem'
+            padding: '0.5rem',
+            borderBottom: '2px solid transparent',
+            transition: 'all 0.2s ease-in-out',
         },
         '& > li > a:hover': {
-            color: '#ffd301',
-            borderBottom: '1px solid red'
+            borderBottom: '2px solid rgb(185, 40, 27)'
         },
         '& > li > a > i': {
             paddingRight: '0.5rem'
         }
-    },
-    ContactDescription: {
-        color: 'rgba(255,255,255,0.8)',
-        fontSize: '1.4rem',
-        padding: '1rem 5rem 1rem 5rem',
-        letterSpacing: '1.5px'
-    },
-    HorizontalRule: {
-        borderColor: 'red',
-        borderStyle: 'dashed',
-        display: 'block',
-        width: '40%',
     }
 }
 

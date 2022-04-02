@@ -2,32 +2,43 @@ const styles = {
     ContactForm: {
         display: 'flex',
         flexDirection: 'column',
-        padding: '0.5rem',
+        padding: '0rem 1rem 1rem 1rem',
         margin: '1rem auto',
         textTransform: 'uppercase',
         width: '80%',
-        '& > label': {
-            marginBottom: '1rem'
-        },
         letterSpacing: '2px',
         backgroundColor: '#131313',
+        borderRadius: '5px',
     },
     ContactFormLabel: {
-        marginBottom: '1rem',
-        display: 'none',
-        paddingBottom: '1rem',
-        fontSize: '2rem',
+        fontSize: '0.75rem',
+        textAlign: 'left',
         color: 'white',
+        padding: '1rem 0',
     },
     ContactFormTextarea: {
-        minHeight: '200px',
+        minHeight: '150px',
         maxWidth: '100%',
-        backgroundColor: 'rgba(0,0,0,0.5)',
+        backgroundColor: 'rgba(0,0,0,0.5) !important',
         color: '#ffd301',
         padding: '1rem',
         outline: 'none',
         border: 'none',
-        resize: 'none'
+        resize: 'none',
+        borderRadius: '5px'
+    },
+    ContactFormName: {
+        backgroundColor: 'rgba(0,0,0,0.5) !important',
+        color: '#ffd301',
+        padding: '1rem',
+        outline: 'none',
+        border: 'none',
+        resize: 'none',
+        borderRadius: '5px',
+        colorScheme: 'dark',
+        '&:internal-autofill-selected': {
+            backgroundColor: 'yellow',
+        }
     },
     ContactFormButton: {
         position: 'relative',
@@ -35,13 +46,15 @@ const styles = {
         height: '50px',
         textTransform: 'uppercase',
         backgroundColor: 'rgba(0,0,0,0.5)',
-        color: '#ffd301',
+        color: 'white',
         letterSpacing: '1px',
         border: 'none',
+        borderRadius: '5px',
+        transition: 'all 0.2s ease-in-out',
         '&:hover': {
             backgroundColor: 'rgba(50,50,50,0.7)',
-            boxShadow: '0px 2px 0px red',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            color: '#ffd301',
         },
         '&:active': {
             top: '3px',
@@ -49,10 +62,20 @@ const styles = {
         },
         '&:focus': {
             outline: '0'
+        },
+        '&:disabled': {
+            cursor: 'not-allowed',
+            backgroundColor: 'rgba(50,50,50,0.1)',
+            color: 'rgba(255,255,255,0.3)'
+
         }
     },
-    ContactInfo: {
-
+    deliveryMessage: {
+        color: 'white',
+        letterSpacing: '2px',
+        color: '#ffd301',
+        lineHeight: '20px',
+        padding: '0rem 4rem'
     }
 }
 

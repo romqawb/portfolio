@@ -1,9 +1,9 @@
 const styles = {
     HorizontalRule: {
-        borderColor: 'red',
-        borderStyle: 'dashed',
-        display: 'block',
-        width: '40%',
+        border: '1.5px solid rgba(185, 40, 27)',
+        borderRadius: '25px',
+        width: props => !props.width ? "50%" : `${props.width}%`,
+        margin: '1rem auto'
     }
 }
 
