@@ -7,41 +7,69 @@ init("user_1U3JlVKH7KgbuF3Snaovh");
 
 const ContactForm = (props) => {
     const { classes } = props;
-    const [value, updateForm] = useState('');
-    const [delivered, setDelivered] = useState('');
+    const [message, setMessage] = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [delivered, setDelivered] = useState(null);
+    const [disabled, setAllowSubmit] = useState(true);
     let mailSuccessMessage = '';
-    // let sentStatus = false;
+
+    const handleChange = (e) => {
+        if (e.target.id === 'name') {
+            setName(e.target.value);
+        } else if (e.target.id === 'email') {
+            setEmail(e.target.value);
+        } else {
+            setMessage(e.target.value);
+        }
+    }
+
     const submitForm = (e) => {
         e.preventDefault();
         let templateParams = {
-            name: 'Roman from contaformjs',
-            notes: 'Notes from contaformjs',
+            from_name: name,
             to_name: 'Roman',
-            message: value
+            reply_to: email,
+            message: message
         }
         emailjs.send('service_5v0dr8f', 'template_608p7bp', templateParams)
             .then(function (response) {
-                mailSuccessMessage = 'You have successfully sent an email! Will respond to you shortly!'
                 setDelivered(true)
             }, function (error) {
-                mailSuccessMessage = 'Unfortunately, mail wasn\'t sent, try again :('
                 setDelivered(false)
             });
-        updateForm('');
+        setMessage('');
+        setName('');
+        setEmail('');
     }
-    const handleChange = (e) => {
-        updateForm(e.target.value);
+
+    if (delivered !== null) {
+        if (delivered) {
+            mailSuccessMessage = 'Thank you for your email, I will respond to you shortly!';
+        } else {
+            mailSuccessMessage = 'Ooops, something went wrong, please try again!';
+        }
     }
     useEffect(() => {
-        console.log('delivered changed')
-    }, [])
+        if (name === '' || email === '' || message === '') {
+            setAllowSubmit(true)
+        } else {
+            setAllowSubmit(false)
+        }
+    })
+
     return (
         <>
             <form className={classes.ContactForm} onSubmit={submitForm}>
-                <label className={classes.ContactFormLabel} htmlFor='message'>Get in touch</label>
-                <textarea className={classes.ContactFormTextarea} type='text' id='message' value={value} onChange={handleChange} required></textarea>
-                <button className={classes.ContactFormButton} type='submit'>Message me</button>
+                <label className={classes.ContactFormLabel} htmlFor='name'>Name:</label>
+                <input className={classes.ContactFormName} id='name' type='text' value={name} onChange={handleChange} required></input>
+                <label className={classes.ContactFormLabel} htmlFor='email'>Email address:</label>
+                <input className={classes.ContactFormName} id='email' type='email' value={email} onChange={handleChange} required></input>
+                <label className={classes.ContactFormLabel} htmlFor='message'>Message:</label>
+                <textarea className={classes.ContactFormTextarea} type='text' id='message' value={message} onChange={handleChange} required></textarea>
+                <button disabled={disabled} className={classes.ContactFormButton} type='submit'>Message me</button>
             </form>
+            <p className={classes.deliveryMessage}>{mailSuccessMessage}</p>
         </>
     )
 }

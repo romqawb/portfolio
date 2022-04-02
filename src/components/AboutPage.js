@@ -7,7 +7,7 @@ import { useEffect } from 'react';
 import PageHeader from './PageHeader';
 import HorizontalRule from './HorizontalRule.js';
 
-const About = (props) => {
+const AboutPage = (props) => {
     const { classes, setActive } = props;
     useEffect(() => {
         setActive(true);
@@ -38,4 +38,4 @@ const About = (props) => {
     )
 }
 
-export default withStyles(styles)(About);
+export default withStyles(styles)(AboutPage);

@@ -6,11 +6,14 @@ const styles = {
         lineHeight: '2.75rem',
         paddingRight: '5rem',
         color: 'azure',
+        transition: 'all 0.2s ease-in-out',
         [sizeModule.down('xxl')]: {
             fontSize: '3.5rem',
+            lineHeight: '3.5rem',
         },
         [sizeModule.down('xl')]: {
             fontSize: '2.5rem',
+            lineHeight: '3rem',
         },
         [sizeModule.down('lg')]: {
             fontSize: '2rem',

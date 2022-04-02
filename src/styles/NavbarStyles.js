@@ -10,6 +10,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
+        transition: 'all 0.2s ease-in-out',
         [sizeModule.down('xxl')]: {
             fontSize: '4rem',
         },

@@ -1,34 +1,45 @@
 import sizeModule from "../components/sizes";
 const styles = {
     Project: {
-        padding: '0 2rem',
-        // border: '1px solid white',
-        borderRadius: '5px',
-        padding: '1rem',
         backgroundColor: 'rgba(0,0,0,0.4)',
-        // backgroundColor: 'rgba(19,19,19,1)',
-        color: 'rgba(255,255,255,0.8)',
-        textAlign: 'left',
         width: '80%',
         margin: '2rem auto',
+        color: 'rgba(255,255,255,0.8)',
+        borderRadius: '5px',
+        padding: '1rem',
+        '& > p': {
+            paddingBottom: '0.5rem',
+            margin: '0',
+            textAlign: 'left',
+            borderBottom: '3px solid rgba(185, 40, 27)',
+        }
+    },
+    ProjectsInfo: {
+        paddingTop: '0.5rem',
+        minHeight: '175px',
         display: 'flex',
         alignItems: 'center',
+        justifyContent: 'center',
         [sizeModule.down("lg")]: {
             flexDirection: 'column',
         },
     },
     ProjectDescription: {
-        width: '50%',
-        fontSize: '1.15rem',
+        minHeight: '175px',
+        display: 'flex',
+        alignItems: 'center',
+        width: '49%',
+        fontSize: '1rem',
         letterSpacing: '1.5px',
         lineHeight: '25px',
-        textAlign: 'center',
-        paddingLeft: '1rem',
         [sizeModule.down('lg')]: {
             width: '100%',
+            borderLeft: 'none',
+            marginLeft: '0rem',
+            minHeight: 'auto',
         },
         '& > p': {
-            margin: '1rem 0 0 0',
+            margin: '0',
         },
         '& > p > span': {
             fontWeight: '700',
@@ -38,16 +49,14 @@ const styles = {
         }
     },
     ProjectMiniView: {
-        height: '175px',
+        minHeight: '175px',
         backgroundImage: props => `url(${props.img})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        width: '50%',
+        width: '49%',
         borderRadius: '5px',
-        // border: '2px solid grey',
         overflow: 'hidden',
         '&:hover > div': {
-            transform: 'all 0.2s ease-in-out',
             opacity: '1',
         },
         [sizeModule.down("lg")]: {
@@ -58,8 +67,7 @@ const styles = {
         backgroundColor: 'rgba(0,0,0,0.8)',
         height: '175px',
         opacity: '0',
-        transform: 'all 0.2s ease-in-out',
-
+        transition: 'all 0.2s ease-in-out',
         '& > div': {
             height: '100%',
             display: 'flex',
@@ -67,12 +75,10 @@ const styles = {
             alignItems: 'center',
         },
         '& > div > a': {
-            display: 'inline-block',
-            padding: '0.75rem',
-            border: '1px solid white',
-            borderRadius: '3px',
+            padding: '10px 20px',
+            border: '0.5px solid azure',
+            borderRadius: '5px',
             backgroundColor: 'black',
-            width: '25%',
             textTransform: 'uppercase',
             textAlign: 'center',
             textDecoration: 'none',
@@ -82,6 +88,23 @@ const styles = {
                 backgroundColor: 'grey'
             }
         }
+    },
+    Divider: {
+        minHeight: '150px',
+        border: '1px solid rgba(185, 40, 27)',
+        width: '0%',
+        margin: '1rem',
+        display: 'block',
+        backgroundColor: 'rgba(185, 40, 27)',
+        borderRadius: '25px',
+        [sizeModule.down("lg")]: {
+            minHeight: '4px',
+            width: '80%',
+        },
+    },
+    Technologies: {
+        fontWeight: '700',
+        color: 'white'
     }
 }
 
