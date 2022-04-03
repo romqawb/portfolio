@@ -6,6 +6,7 @@ const styles = {
         margin: '1rem auto',
         textTransform: 'uppercase',
         width: '80%',
+        maxWidth: '500px',
         letterSpacing: '2px',
         backgroundColor: '#131313',
         borderRadius: '5px',
@@ -19,16 +20,19 @@ const styles = {
     ContactFormTextarea: {
         minHeight: '150px',
         maxWidth: '100%',
-        backgroundColor: 'rgba(0,0,0,0.5) !important',
+        backgroundColor: 'rgba(0,0,0,0.5)',
         color: '#ffd301',
         padding: '1rem',
         outline: 'none',
         border: 'none',
         resize: 'none',
-        borderRadius: '5px'
+        borderRadius: '5px',
+        '&:focus': {
+            backgroundColor: 'rgb(0,0,0,0.8)',
+        }
     },
     ContactFormName: {
-        backgroundColor: 'rgba(0,0,0,0.5) !important',
+        backgroundColor: 'rgba(0,0,0,0.5)',
         color: '#ffd301',
         padding: '1rem',
         outline: 'none',
@@ -36,8 +40,8 @@ const styles = {
         resize: 'none',
         borderRadius: '5px',
         colorScheme: 'dark',
-        '&:internal-autofill-selected': {
-            backgroundColor: 'yellow',
+        '&:focus': {
+            backgroundColor: 'rgb(0,0,0,0.8)',
         }
     },
     ContactFormButton: {
@@ -71,7 +75,6 @@ const styles = {
         }
     },
     deliveryMessage: {
-        color: 'white',
         letterSpacing: '2px',
         color: '#ffd301',
         lineHeight: '20px',

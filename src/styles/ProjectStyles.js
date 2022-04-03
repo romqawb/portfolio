@@ -3,6 +3,7 @@ const styles = {
     Project: {
         backgroundColor: 'rgba(0,0,0,0.4)',
         width: '80%',
+        maxWidth: '600px',
         margin: '2rem auto',
         color: 'rgba(255,255,255,0.8)',
         borderRadius: '5px',

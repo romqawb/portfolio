@@ -1,9 +1,9 @@
 import sizeModule from "../components/sizes";
 const styles = {
     IntroText: {
+        fontFamily: 'BlinkMacSystemFont',
         letterSpacing: '2px',
-        fontWeight: '200',
-        lineHeight: '2.75rem',
+        fontWeight: '300',
         paddingRight: '5rem',
         color: 'azure',
         transition: 'all 0.2s ease-in-out',
@@ -17,9 +17,11 @@ const styles = {
         },
         [sizeModule.down('lg')]: {
             fontSize: '2rem',
+            lineHeight: '2.5rem',
         },
         [sizeModule.down("md")]: {
-            fontSize: '1.25rem'
+            fontSize: '1.25rem',
+            lineHeight: '2rem',
         },
     },
     container: {

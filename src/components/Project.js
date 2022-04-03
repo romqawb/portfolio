@@ -1,6 +1,6 @@
 import { withStyles } from '@mui/styles';
 import styles from '../styles/ProjectStyles';
-import HorizontalRule from './HorizontalRule';
+
 const Project = (props) => {
     const { classes, description, url, github, tech } = props;
     return (

@@ -19,12 +19,13 @@ const styles = {
         padding: '0rem 4rem',
         fontSize: '1.2rem',
         lineHeight: '24px',
-        letterSpacing: '2px'
+        letterSpacing: '2px',
     },
     ContactInfoContainer: {
         backgroundColor: 'rgb(19,19,19)',
         borderRadius: '5px',
         width: '80%',
+        maxWidth: '500px',
         margin: '1rem auto',
         padding: '1rem'
     },

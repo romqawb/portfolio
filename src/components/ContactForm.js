@@ -56,7 +56,7 @@ const ContactForm = (props) => {
         } else {
             setAllowSubmit(false)
         }
-    })
+    }, [name, email, message]);
 
     return (
         <>

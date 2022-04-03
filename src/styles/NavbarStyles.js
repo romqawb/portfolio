@@ -37,7 +37,7 @@ const styles = {
         left: '0px',
         '&:hover': {
             color: 'yellow',
-            left: '40px'
+            left: '40px',
         }
     },
     span: {

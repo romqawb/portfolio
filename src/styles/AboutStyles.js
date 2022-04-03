@@ -26,6 +26,9 @@ const styles = {
         padding: '0 2rem',
         letterSpacing: '2px',
         lineHeight: '24px',
+        width: '90%',
+        maxWidth: '500px',
+        margin: '1rem auto 0 auto'
     }
 }
 
