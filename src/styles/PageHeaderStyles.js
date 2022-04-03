@@ -25,7 +25,7 @@ const styles = {
             cursor: 'pointer',
             backgroundColor: 'rgba(0,0,0,0.4)',
             color: '#ffd301',
-            transform: 'scale(1.05)',
+            transform: 'scale(1.03)',
             borderColor: '#ffd301'
         },
         '&:active': {

@@ -6,7 +6,7 @@ const styles = {
         margin: '1rem auto',
         textTransform: 'uppercase',
         width: '80%',
-        maxWidth: '500px',
+        maxWidth: '400px',
         letterSpacing: '2px',
         backgroundColor: '#131313',
         borderRadius: '5px',

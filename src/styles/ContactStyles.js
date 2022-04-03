@@ -25,7 +25,7 @@ const styles = {
         backgroundColor: 'rgb(19,19,19)',
         borderRadius: '5px',
         width: '80%',
-        maxWidth: '500px',
+        maxWidth: '400px',
         margin: '1rem auto',
         padding: '1rem'
     },

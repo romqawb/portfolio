@@ -22,7 +22,7 @@ const AboutPage = (props) => {
         >
             <div className={classes.AboutPage}>
                 <PageHeader name='About' setActive={setActive} />
-                <img className={classes.AboutImg} src='https://images.unsplash.com/photo-1553272725-086100aecf5e?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1665&q=80' alt='img of myself' />
+                <img className={classes.AboutImg} src='/selfie.jpg' alt='img of myself' />
                 <p className={classes.AboutInfo}>
                     Currently working as an IT support specialist where I grew my interest in technology and problem solving.<br />
                 </p>

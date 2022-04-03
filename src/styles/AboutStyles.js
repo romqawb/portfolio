@@ -18,7 +18,7 @@ const styles = {
         maxHeight: '250px',
         width: '250px',
         borderRadius: '50%',
-        border: '5px solid rgba(255,255,255,0.4)'
+        border: '4px solid rgba(185, 40, 27,0.8)'
     },
     AboutInfo: {
         color: 'rgba(255,255,255,0.7)',

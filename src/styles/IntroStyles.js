@@ -1,7 +1,7 @@
 import sizeModule from "../components/sizes";
 const styles = {
     IntroText: {
-        fontFamily: 'BlinkMacSystemFont',
+        fontFamily: 'Open Sans, sans-serif',
         letterSpacing: '2px',
         fontWeight: '300',
         paddingRight: '5rem',
