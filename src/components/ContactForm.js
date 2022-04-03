@@ -2,7 +2,11 @@ import { React, useState, useEffect } from 'react';
 import { withStyles } from '@mui/styles';
 import styles from '../styles/ContactFormStyles.js';
 import emailjs, { init } from 'emailjs-com';
-init("user_1U3JlVKH7KgbuF3Snaovh");
+
+if (process.env.NODE_ENV !== 'production') {
+    init(process.env.REACT_APP_EMAILJS_USER);
+}
+
 
 
 const ContactForm = (props) => {
